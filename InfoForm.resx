@@ -117,22 +117,65 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>156, 17</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAH4AAAAoCAYAAAA49E5iAAAABGdBTUEAALGPC/xhBQAABOtJREFUeF7t
+        2GuRFTEQBeCVgAQkIIAfSEACPxCABBwgAQlIQAISkIAEmI/lVHWlMpO7l727ma2cqq555DFJzunuZO4W
+        psDrzT5v9v3Avm32fjN4t1neu694tZm+9LkwMT5s9uuf/SxX9rvc/9jszT8jAgS7KqtAunYRycKE4JUI
+        DUlI5cWQshbIVg/xEUSFcsQrX5gUyEViwFu/3N/+FUNEUKEOKEdwngHZIkZPMAsTgwfH+z9t9vX+tot4
+        ds3xEUPEs3ACII23JkQjHbl76IX5ld9PCCRXot3vhWzpAcFtRJAavF87+pMgRNZ8jUQRoAfhvQ3pIoV3
+        K7+fCDy39VSkeue41wOCs/lDenL+yu8nQt3NB6KAPN7+oAmIBNmiQtIC4ld+f8EghvacTiSsfb9wBRyp
+        2EwQ+nl23Qgao3d1j7DwH7C4sy1mfvEm9/N+zyu3PyKEzhm9yKaOKF3l9keLSu05UN6YKXc81ljMk8fU
+        36bBQ8JnOx793XqT5ZuPdl63CFFRdohCSt7NEE4QYiw13AUWQtlo0c2TN+vDUcq9dhF45h9Tr/e99GN9
+        XHmh/jyn7+lBpQYc9eccaUI5OngeqUw5L7nGRjA2i4kc47G4FfHSI+KVaWd+8dScozMG76vHRxCpD+mn
+        jruuEVG0QpkSSDfYIBN3NWH3Jlon34NyE77GRn1bWOSrFy+tGIlTu0SL+q1Eujp/4wnxPeRbcRQYtZkS
+        Bl3RLqKFGhFza8STXY2tph5jQ2grhgokaXdUJxiRSCjKe8T3UuLbzUSW57KPm12EnkfNgoiyeqj7vUUP
+        EsWQNsKI+IivOoy67biCUxAfz9DgoeB5Jn6NXQqiZBVZ9ESFHkLWtcS3fRtD9gvWyjNxnQommonFM6qa
+        hfwjbwrUq0p7iF2SSvRvbLy+YpTfQf/qIKuHGrYjkhCvbY2AyrMe7gn36NtTIpPMxJK/qhci5iFeeSuE
+        vEq8BR/l9yACqaIGa1D7bIknilquvW/6tjFdItrpkNBuMrwdyZ4pWpnrJd7+VECARTc2YhRiM94REBRh
+        I1Uf5k001WPVSyhXx5oQQ6CuPlrTT00P0yOKz/EthNd3s8BYjAmBxscseiVmhAhcW/Pszc87JKrT9q09
+        YcQp1HONqJTdAsYRB2Xuq80QlW8CkyPKCovMnkqcviMSGEsP3iN/RIJyEUJf6hPYXp9BhKg+IzQCjojT
+        F1G8GFC7SdVcboJPPdGE+T1iCfOoHNQxD3MiJFfPl8xFffVYTU8BJ7ikn9MgxLsC76Dw58ipvMsCV3IR
+        4tl75UdAstRQoe0RoUHPASqsh3Jr82JgsSysEMfasP+UIDzjQUDGI+R6P0o7IbgN7fHWIzGH2FY4gTEo
+        3xPGwjMCKTwy0SsgHqQhbw/J8W1bILhLxLPwjOhFBYJA2t4mT5ts4HrpoEaDUdRZmATZFCJ2j7Tk90QL
+        RiQIT8rpRYKFiZHj2BFx8WgEu49pJ8QfbQoXJoSj14h02MvvIkQiwcJJIFTz1hHpo/x+VLYwGeR1pNf/
+        AYjricA7xPaOadooW8SfAPl71xIl7PfO6MnvvbKIgq3d/MRANk9HIqJjyCWG3nEuZ/xeNNA2xAf6WN4/
+        GXJe37OQizik5m8ci1iqZ9ffvZBosrx/IiADeUcWT0Wg5xzbap2WVGIQFWzyXLXt4O7uDwYH8D3BYwMb
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="pictureBox1.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAH4AAAAoCAYAAAA49E5iAAAABGdBTUEAALGPC/xhBQAABOtJREFUeF7t
+        2GuRFTEQBeCVgAQkIIAfSEACPxCABBwgAQlIQAISkIAEmI/lVHWlMpO7l727ma2cqq555DFJzunuZO4W
+        psDrzT5v9v3Avm32fjN4t1neu694tZm+9LkwMT5s9uuf/SxX9rvc/9jszT8jAgS7KqtAunYRycKE4JUI
+        DUlI5cWQshbIVg/xEUSFcsQrX5gUyEViwFu/3N/+FUNEUKEOKEdwngHZIkZPMAsTgwfH+z9t9vX+tot4
+        ds3xEUPEs3ACII23JkQjHbl76IX5ld9PCCRXot3vhWzpAcFtRJAavF87+pMgRNZ8jUQRoAfhvQ3pIoV3
+        K7+fCDy39VSkeue41wOCs/lDenL+yu8nQt3NB6KAPN7+oAmIBNmiQtIC4ld+f8EghvacTiSsfb9wBRyp
+        2EwQ+nl23Qgao3d1j7DwH7C4sy1mfvEm9/N+zyu3PyKEzhm9yKaOKF3l9keLSu05UN6YKXc81ljMk8fU
+        36bBQ8JnOx793XqT5ZuPdl63CFFRdohCSt7NEE4QYiw13AUWQtlo0c2TN+vDUcq9dhF45h9Tr/e99GN9
+        XHmh/jyn7+lBpQYc9eccaUI5OngeqUw5L7nGRjA2i4kc47G4FfHSI+KVaWd+8dScozMG76vHRxCpD+mn
+        jruuEVG0QpkSSDfYIBN3NWH3Jlon34NyE77GRn1bWOSrFy+tGIlTu0SL+q1Eujp/4wnxPeRbcRQYtZkS
+        Bl3RLqKFGhFza8STXY2tph5jQ2grhgokaXdUJxiRSCjKe8T3UuLbzUSW57KPm12EnkfNgoiyeqj7vUUP
+        EsWQNsKI+IivOoy67biCUxAfz9DgoeB5Jn6NXQqiZBVZ9ESFHkLWtcS3fRtD9gvWyjNxnQommonFM6qa
+        hfwjbwrUq0p7iF2SSvRvbLy+YpTfQf/qIKuHGrYjkhCvbY2AyrMe7gn36NtTIpPMxJK/qhci5iFeeSuE
+        vEq8BR/l9yACqaIGa1D7bIknilquvW/6tjFdItrpkNBuMrwdyZ4pWpnrJd7+VECARTc2YhRiM94REBRh
+        I1Uf5k001WPVSyhXx5oQQ6CuPlrTT00P0yOKz/EthNd3s8BYjAmBxscseiVmhAhcW/Pszc87JKrT9q09
+        YcQp1HONqJTdAsYRB2Xuq80QlW8CkyPKCovMnkqcviMSGEsP3iN/RIJyEUJf6hPYXp9BhKg+IzQCjojT
+        F1G8GFC7SdVcboJPPdGE+T1iCfOoHNQxD3MiJFfPl8xFffVYTU8BJ7ikn9MgxLsC76Dw58ipvMsCV3IR
+        4tl75UdAstRQoe0RoUHPASqsh3Jr82JgsSysEMfasP+UIDzjQUDGI+R6P0o7IbgN7fHWIzGH2FY4gTEo
+        3xPGwjMCKTwy0SsgHqQhbw/J8W1bILhLxLPwjOhFBYJA2t4mT5ts4HrpoEaDUdRZmATZFCJ2j7Tk90QL
+        RiQIT8rpRYKFiZHj2BFx8WgEu49pJ8QfbQoXJoSj14h02MvvIkQiwcJJIFTz1hHpo/x+VLYwGeR1pNf/
+        AYjricA7xPaOadooW8SfAPl71xIl7PfO6MnvvbKIgq3d/MRANk9HIqJjyCWG3nEuZ/xeNNA2xAf6WN4/
+        GXJe37OQizik5m8ci1iqZ9ffvZBosrx/IiADeUcWT0Wg5xzbap2WVGIQFWzyXLXt4O7uDwYH8D3BYwMb
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Вариант №14 работы №3 был выполнен студентом группы 423 Ореховым Даниилом.
+Программа строит график и выводит таблицу значений функции Квадратрисы
+на заданном отрезке с заданными коэффициентом "R" и шагом.
+</value>
+  </data>
 </root>
