@@ -41,16 +41,19 @@
             loadBtn = new Button();
             saveBtn = new Button();
             infoBtn = new Button();
+            checkBox1 = new CheckBox();
+            button1 = new Button();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)resultsTable).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(145, 151, 167);
-            panel1.Location = new Point(203, 2);
-            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.BackColor = Color.FromArgb(39, 48, 67);
+            panel1.BackgroundImageLayout = ImageLayout.Center;
+            panel1.Location = new Point(232, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(594, 407);
+            panel1.Size = new Size(679, 543);
             panel1.TabIndex = 0;
             // 
             // buildBtn
@@ -59,10 +62,9 @@
             buildBtn.Enabled = false;
             buildBtn.FlatStyle = FlatStyle.System;
             buildBtn.ForeColor = Color.FromArgb(39, 48, 67);
-            buildBtn.Location = new Point(35, 135);
-            buildBtn.Margin = new Padding(3, 2, 3, 2);
+            buildBtn.Location = new Point(40, 180);
             buildBtn.Name = "buildBtn";
-            buildBtn.Size = new Size(131, 22);
+            buildBtn.Size = new Size(150, 29);
             buildBtn.TabIndex = 1;
             buildBtn.Text = "Построить график";
             buildBtn.UseVisualStyleBackColor = false;
@@ -71,11 +73,10 @@
             // radiusBox
             // 
             radiusBox.BackColor = Color.FromArgb(239, 246, 238);
-            radiusBox.Location = new Point(137, 25);
-            radiusBox.Margin = new Padding(3, 2, 3, 2);
+            radiusBox.Location = new Point(157, 33);
             radiusBox.Name = "radiusBox";
             radiusBox.PlaceholderText = "R";
-            radiusBox.Size = new Size(40, 23);
+            radiusBox.Size = new Size(45, 27);
             radiusBox.TabIndex = 2;
             radiusBox.TextChanged += TextBox_TextChanged;
             radiusBox.KeyPress += TextBoxPos_KeyPress;
@@ -83,11 +84,10 @@
             // y1Box
             // 
             y1Box.BackColor = Color.FromArgb(239, 246, 238);
-            y1Box.Location = new Point(137, 74);
-            y1Box.Margin = new Padding(3, 2, 3, 2);
+            y1Box.Location = new Point(157, 99);
             y1Box.Name = "y1Box";
             y1Box.PlaceholderText = "y1";
-            y1Box.Size = new Size(40, 23);
+            y1Box.Size = new Size(45, 27);
             y1Box.TabIndex = 4;
             y1Box.TextChanged += TextBox_TextChanged;
             y1Box.KeyPress += TextBoxGeneral_KeyPress;
@@ -95,11 +95,10 @@
             // y2Box
             // 
             y2Box.BackColor = Color.FromArgb(239, 246, 238);
-            y2Box.Location = new Point(137, 99);
-            y2Box.Margin = new Padding(3, 2, 3, 2);
+            y2Box.Location = new Point(157, 132);
             y2Box.Name = "y2Box";
             y2Box.PlaceholderText = "y2";
-            y2Box.Size = new Size(40, 23);
+            y2Box.Size = new Size(45, 27);
             y2Box.TabIndex = 5;
             y2Box.TextChanged += TextBox_TextChanged;
             y2Box.KeyPress += TextBoxGeneral_KeyPress;
@@ -107,11 +106,10 @@
             // stepBox
             // 
             stepBox.BackColor = Color.FromArgb(239, 246, 238);
-            stepBox.Location = new Point(137, 50);
-            stepBox.Margin = new Padding(3, 2, 3, 2);
+            stepBox.Location = new Point(157, 67);
             stepBox.Name = "stepBox";
             stepBox.PlaceholderText = "Шаг";
-            stepBox.Size = new Size(41, 23);
+            stepBox.Size = new Size(46, 27);
             stepBox.TabIndex = 3;
             stepBox.TextChanged += TextBox_TextChanged;
             stepBox.KeyPress += TextBoxPos_KeyPress;
@@ -120,9 +118,9 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = Color.FromArgb(239, 246, 238);
-            label1.Location = new Point(80, 27);
+            label1.Location = new Point(91, 36);
             label1.Name = "label1";
-            label1.Size = new Size(48, 15);
+            label1.Size = new Size(59, 20);
             label1.TabIndex = 8;
             label1.Text = "Радиус:";
             // 
@@ -130,9 +128,9 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = Color.FromArgb(239, 246, 238);
-            label2.Location = new Point(97, 52);
+            label2.Location = new Point(111, 69);
             label2.Name = "label2";
-            label2.Size = new Size(32, 15);
+            label2.Size = new Size(40, 20);
             label2.TabIndex = 9;
             label2.Text = "Шаг:";
             // 
@@ -140,9 +138,9 @@
             // 
             label3.AutoSize = true;
             label3.ForeColor = Color.FromArgb(239, 246, 238);
-            label3.Location = new Point(5, 76);
+            label3.Location = new Point(6, 101);
             label3.Name = "label3";
-            label3.Size = new Size(114, 15);
+            label3.Size = new Size(145, 20);
             label3.TabIndex = 10;
             label3.Text = " Нижняя граница y:";
             // 
@@ -150,9 +148,9 @@
             // 
             label4.AutoSize = true;
             label4.ForeColor = Color.FromArgb(239, 246, 238);
-            label4.Location = new Point(7, 101);
+            label4.Location = new Point(8, 135);
             label4.Name = "label4";
-            label4.Size = new Size(112, 15);
+            label4.Size = new Size(143, 20);
             label4.TabIndex = 11;
             label4.Text = "Верхняя граница y:";
             // 
@@ -164,15 +162,14 @@
             resultsTable.ColumnHeadersHeight = 29;
             resultsTable.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2 });
             resultsTable.GridColor = SystemColors.ActiveBorder;
-            resultsTable.Location = new Point(802, 27);
-            resultsTable.Margin = new Padding(3, 2, 3, 2);
+            resultsTable.Location = new Point(917, 36);
             resultsTable.Name = "resultsTable";
             resultsTable.ReadOnly = true;
             resultsTable.RowHeadersVisible = false;
             resultsTable.RowHeadersWidth = 51;
             resultsTable.RowTemplate.Height = 29;
             resultsTable.ScrollBars = ScrollBars.Vertical;
-            resultsTable.Size = new Size(219, 352);
+            resultsTable.Size = new Size(250, 469);
             resultsTable.TabIndex = 12;
             // 
             // Column1
@@ -201,9 +198,10 @@
             // 
             loadBtn.FlatStyle = FlatStyle.System;
             loadBtn.ForeColor = Color.FromArgb(39, 48, 67);
-            loadBtn.Location = new Point(100, 162);
+            loadBtn.Location = new Point(114, 216);
+            loadBtn.Margin = new Padding(3, 4, 3, 4);
             loadBtn.Name = "loadBtn";
-            loadBtn.Size = new Size(88, 23);
+            loadBtn.Size = new Size(101, 31);
             loadBtn.TabIndex = 13;
             loadBtn.Text = "Загрузить";
             loadBtn.UseVisualStyleBackColor = true;
@@ -215,9 +213,10 @@
             saveBtn.Enabled = false;
             saveBtn.FlatStyle = FlatStyle.System;
             saveBtn.ForeColor = Color.FromArgb(39, 48, 67);
-            saveBtn.Location = new Point(7, 162);
+            saveBtn.Location = new Point(8, 216);
+            saveBtn.Margin = new Padding(3, 4, 3, 4);
             saveBtn.Name = "saveBtn";
-            saveBtn.Size = new Size(88, 23);
+            saveBtn.Size = new Size(101, 31);
             saveBtn.TabIndex = 14;
             saveBtn.Text = "Сохранить";
             saveBtn.UseVisualStyleBackColor = false;
@@ -227,21 +226,52 @@
             // 
             infoBtn.FlatStyle = FlatStyle.System;
             infoBtn.ForeColor = Color.FromArgb(39, 48, 67);
-            infoBtn.Location = new Point(35, 190);
-            infoBtn.Margin = new Padding(3, 2, 3, 2);
+            infoBtn.Location = new Point(40, 253);
             infoBtn.Name = "infoBtn";
-            infoBtn.Size = new Size(131, 22);
+            infoBtn.Size = new Size(150, 29);
             infoBtn.TabIndex = 15;
             infoBtn.Text = "Информация";
             infoBtn.UseVisualStyleBackColor = true;
-            infoBtn.Click += InfoBtn_Click;
+            // 
+            // checkBox1
+            // 
+            checkBox1.ForeColor = Color.FromArgb(239, 246, 238);
+            checkBox1.Location = new Point(6, 300);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(196, 57);
+            checkBox1.TabIndex = 16;
+            checkBox1.Text = "Показать информацию при запуске";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(56, 363);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 17;
+            button1.Text = "Тест";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.ForeColor = Color.FromArgb(239, 246, 238);
+            label5.Location = new Point(56, 395);
+            label5.Name = "label5";
+            label5.Size = new Size(0, 20);
+            label5.TabIndex = 18;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(39, 48, 67);
-            ClientSize = new Size(1054, 412);
+            ClientSize = new Size(1205, 549);
+            Controls.Add(label5);
+            Controls.Add(button1);
+            Controls.Add(checkBox1);
             Controls.Add(infoBtn);
             Controls.Add(saveBtn);
             Controls.Add(loadBtn);
@@ -256,6 +286,7 @@
             Controls.Add(radiusBox);
             Controls.Add(buildBtn);
             Controls.Add(panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)resultsTable).EndInit();
@@ -283,5 +314,8 @@
         private Button loadBtn;
         private Button saveBtn;
         private Button infoBtn;
+        private CheckBox checkBox1;
+        private Button button1;
+        private Label label5;
     }
 }

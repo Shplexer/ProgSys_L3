@@ -1,6 +1,7 @@
-using ScottPlot;
+п»їusing ScottPlot;
 using ScottPlot.AxisLimitCalculators;
 using System.Globalization;
+using System.Security.AccessControl;
 
 namespace WinFormsApp1 {
     public partial class Form1 : Form {
@@ -9,14 +10,23 @@ namespace WinFormsApp1 {
 
             CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
             InitializeComponent();
+            //infoBtn.Click += InfoBtn_Click;
             fp = new() { Dock = DockStyle.Fill };
             fp.Plot.XLabel("X");
             fp.Plot.YLabel("Y");
             fp.Plot.Style.Background(figure: ScottPlot.Color.FromHex("#273043"), data: ScottPlot.Color.FromHex("#273043"));
             fp.Plot.Style.ColorAxes(ScottPlot.Color.FromHex("#a0acb5"));
             panel1.Controls.Add(fp);
+            if (CheckShowGreeting()) {
+                checkBox1.Checked = true;
+                ShowInfo();
+            }
+            else {
+                checkBox1.Checked = false;
+            }
 
         }
+
         private static int CountDigitsAfterDecimalPoint(double number) {
             string numberString = number.ToString("0.#############################");
 
@@ -103,16 +113,30 @@ namespace WinFormsApp1 {
             return number > 0;
         }
 
-
+        private static double CalculateEquation(double y, double R) {
+            var Ctg = new Func<double, double>((x) => 1 / Math.Tan(x));
+            return y * Ctg((Math.PI * y) / (2 * R));
+        }
+        private void Test() {
+            double y = 2.0;
+            double R = 4.0;
+            double expected = y * (1 / Math.Tan((Math.PI * y) / (2 * R)));
+            double x = CalculateEquation(2.0, 4.0);
+            if (x == expected) {
+                label5.Text = "РўРµСЃС‚ РїСЂРѕРёМ†РґРµРЅ";
+            }
+            else {
+                label5.Text = "РўРµСЃС‚ РїСЂРѕРІР°Р»РµРЅ";
+            }
+        }
         private void BuildGraph() {
             ScottPlot.Plot myPlot = fp.Plot;
-
             panel1.Controls.Remove(fp);
             myPlot.Clear();
             panel1.Controls.Add(fp);
             resultsTable.Rows.Clear();
 
-            var Ctg = new Func<double, double>((x) => 1 / Math.Tan(x));
+
             List<double> XList = new();
             List<double> YList = new();
             double R = double.Parse(radiusBox.Text.Replace(',', '.'));
@@ -124,7 +148,7 @@ namespace WinFormsApp1 {
 
             for (double y = y1; y <= y2; y += step) {
 
-                double x = y * Ctg((Math.PI * y) / (2 * R));
+                double x = CalculateEquation(y, R);
                 if (XList.Count > 0) {
                     if ((y > 0 && XList.Last() < x) || (y < 0 && XList.Last() > x)) {
                         var scatter = myPlot.Add.Scatter(XList.ToArray(), YList.ToArray());
@@ -167,8 +191,11 @@ namespace WinFormsApp1 {
                 y1Box.Text = reader.ReadLine();
                 y2Box.Text = reader.ReadLine();
                 reader.Close();
-                MessageBox.Show("Данные успешно загружены из файла: " + filePath);
-                BuildGraph();
+                MessageBox.Show("Р”Р°РЅРЅС‹Рµ СѓСЃРїРµС€РЅРѕ Р·Р°РіСЂСѓР¶РµРЅС‹ РёР· С„Р°Р№Р»Р°: " + filePath);
+                if (buildBtn.Enabled) {
+                    BuildGraph();
+
+                }
             }
 
         }
@@ -187,7 +214,7 @@ namespace WinFormsApp1 {
                 writer.WriteLine(y1Box.Text);
                 writer.WriteLine(y2Box.Text);
                 writer.WriteLine("//");
-                writer.WriteLine("Результаты:");
+                writer.WriteLine("Р РµР·СѓР»СЊС‚Р°С‚С‹:");
                 foreach (DataGridViewRow row in resultsTable.Rows) {
                     foreach (DataGridViewCell cell in row.Cells) {
                         writer.Write($"{cell.Value} ");
@@ -196,12 +223,46 @@ namespace WinFormsApp1 {
                 }
 
                 writer.Close();
-                MessageBox.Show("Данные из таблицы успешно сохранены в файл: " + filePath);
+                MessageBox.Show("Р”Р°РЅРЅС‹Рµ РёР· С‚Р°Р±Р»РёС†С‹ СѓСЃРїРµС€РЅРѕ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р»: " + filePath);
             }
         }
-        private static void InfoBtn_Click(object sender, EventArgs e) {
+        private bool CheckShowGreeting() {
+            const string filePath = "ShowGreetingCheck.txt";
+            using StreamReader reader = new(filePath);
+            if (reader.ReadLine() == "1") {
+                reader.Close();
+                return true;
+            }
+            else {
+                reader.Close();
+                return false;
+            }
+
+        }
+        private static void ChangeShowGreeting(bool isChecked) {
+            const string filePath = "ShowGreetingCheck.txt";
+            using StreamWriter writer = new(filePath);
+            if (isChecked) {
+                writer.WriteLine("1");
+            }
+            else {
+                writer.WriteLine("0");
+            }
+        }
+        private static void ShowInfo() {
             InfoForm info = new();
             info.ShowDialog();
+        }
+        private void InfoBtn_Click(object sender, EventArgs e) {
+            ShowInfo();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e) {
+            ChangeShowGreeting(checkBox1.Checked);
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            Test();
         }
     }
 }
